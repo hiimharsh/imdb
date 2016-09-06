@@ -1,4 +1,3 @@
-var imdbapi = "http://www.omdbapi.com/";
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function() {

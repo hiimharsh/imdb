@@ -6,7 +6,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
-  $scope.imdbapi = "http://www.omdbapi.com/";
   $scope.moviename = "";
   $scope.movieyear = "";
 
@@ -16,7 +15,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     movieyear = movie.year;
     console.log(movieyear);
     if (formimdb.$valid) {
-      $http.get(imdbapi + '?t=' + moviename + '&y=' + movieyear + '&r=json')
+      $http.get('https://www.omdbapi.com/?t=' + moviename + '&y=' + movieyear + '&r=json')
         .success(function(data) {
           $scope.moviedata = data;
           console.log(data);
