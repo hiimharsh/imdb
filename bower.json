@@ -1,0 +1,32 @@
+{
+  "name": "imdb",
+  "authors": [
+    "Harsh Thakkar <harshthakkar46@gmail.com>"
+  ],
+  "description": "imdb",
+  "main": "views/index.html",
+  "moduleType": [],
+  "keywords": [],
+  "license": "MIT",
+  "homepage": "http://hiimharsh.github.io/harsh",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-ui": "~0.4.0",
+    "animate.css": "~3.3.0",
+    "bourbon": "~4.2.5",
+    "angular-sanitize": "~1.4.3",
+    "font-awesome": "^4.6.3",
+    "ui-router": "~0.2.15",
+    "angular-aria": "^1.5.8",
+    "angular-messages": "^1.5.8",
+    "angular-material": "^1.0.9"
+  }
+}

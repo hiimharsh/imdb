@@ -1,0 +1,174 @@
+// importing style packages
+//@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap.scss"
+//@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins"
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon"
+@import "../bower_components/font-awesome/css/font-awesome.min.css"
+
+@import "../bower_components/angular-material/angular-material.css"
+
+@import url(https://fonts.googleapis.com/css?family=Lato)
+@import url(https://fonts.googleapis.com/css?family=Roboto)
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons)
+
+@import "mixins"
+
+/* Bootstrap Variables Goes Here */
+
+$brand-primary: #0d9dff !default
+$brand-success: #84ce3c !default
+$brand-warning: #ffec39 !default
+$brand-danger: #fc483f !default
+$brand-info: #000072 !default
+
+$facebook: #3a579d !default
+$google: #dd4d3c !default
+$twitter: #49c8f5 !default
+
+$body-bg: #fff !default
+
+$link-hover-color: black !default
+$link-hover-decoration: none !default
+
+$font-family-sans-serif: "Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif !default
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default
+
+//@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap"
+
+*
+  margin: 0 auto
+  padding: 0
+  box-sizing: border-box
+
+  &:hover, &:focus, &:active
+    outline: none !important
+
+body
+  font-family: $font-family-sans-serif
+
+a
+  text-decoration: none
+  color: black
+
+a, .btn
+  cursor: pointer
+  @include transition(all 300ms ease)
+
+img
+  @include transition(all 300ms ease)
+
+// classes
+.white
+  color: white
+.black
+  color: black
+.red
+  color: red
+.white-bg
+  background-color: white
+.black-bg
+  background-color: black
+
+.btn
+  height: 30px
+  font-family: $font-family-sans-serif
+  font-weight: 400
+  @include transition(all 300ms ease)
+  outline: 0 !important
+
+.clearfix
+  overflow: auto
+
+//bootstrap forms
+.input-lg,
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn,
+.btn, .form-control
+  border-radius: 0
+  box-shadow: none
+
+.form-control:focus
+  border-color: $brand-primary
+  outline: 0
+  box-shadow: none
+
+.material-icons
+  font-family: 'Material Icons'
+  font-weight: normal
+  font-style: normal
+  font-size: 28px
+  /* Preferred icon size */
+  display: inline-block
+  line-height: 1
+  text-transform: none
+  letter-spacing: normal
+  word-wrap: normal
+  white-space: nowrap
+  direction: ltr
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale
+  /* Support for IE. */
+  font-feature-settings: 'liga'
+
+/* Start writing sass here */
+header
+  .md-settings:hover
+    @include transform(rotate(-10deg))
+    @include transition(all 300ms ease-in-out)
+
+  h2.md-accent
+    margin-left: 20px
+    span
+      color: white
+
+footer
+  margin: 100px 20px 50px
+
+form
+  margin: 50px 100px
+
+  md-input-container
+    width: 400px
+    margin: 0 auto
+
+  button.md-button
+    display: block
+    margin: 0 auto
+
+md-card
+  width: 600px
+  height: auto
+  display: block
+  margin: 30px auto
+
+  img
+    width: 100%
+
+  .details
+    padding: 20px
+
+    h2
+      display: inline-block
+      font-size: 28px
+    .year
+      margin-left: 5px
+      font-size: 24px
+    .genre
+      margin: 10px 0
+      display: inline-block
+      font-size: 18px
+      color: #c93
+    .runtime
+      margin-left: 15px
+    .plot
+      margin: 20px 0
+      font-size: 18px
+    .extra
+      margin: 5px 0
+    .more
+      color: #c93
+      font-weight: bold

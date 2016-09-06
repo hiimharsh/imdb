@@ -1,0 +1,39 @@
+<div class="container">
+
+  <form name="imdb" ng-hide="formComplete">
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Enter movie name</label>
+      <input type="text" ng-model="movie.name" required>
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Enter movie year (Optional)</label>
+      <input type="number" ng-model="movie.year">
+    </md-input-container>
+    <md-button class="md-raised md-accent" ng-click="getDetails(imdb, movie)" ng-submit="getDetails(imdb, movie)">Submit</md-button>
+  </form>
+
+  <md-card ng-if="moviedata" title="{{moviedata.Title}}">
+    <a href="http://imdb.com/title/{{moviedata.imdbID}}/?ref=harsh" target="_blank">
+      <img ng-src="{{moviedata.Poster}}" alt="{{moviedata.Title}}" title="{{moviedata.Title}}" />
+      <div class="details">
+        <div class="title">
+          <h2>{{moviedata.Title}}</h2><span class="year"> ({{moviedata.Year}})</span>
+        </div>
+        <div class="sub">
+          <p class="genre">{{moviedata.Genre}}</p><span class="runtime">{{moviedata.Runtime}}</span>
+        </div>
+
+        <p class="plot">{{moviedata.Plot}}</p>
+
+        <p class="actor extra"><span class="more">Actors: </span>{{moviedata.Actors}}</p>
+        <p class="writer extra"><span class="more">Writers: </span>{{moviedata.Writer}}</p>
+        <p class="awards extra"><span class="more">Awards: </span>{{moviedata.Awards}}</p>
+        <p class="released extra"><span class="more">Released: </span>{{moviedata.Released}}</p>
+        <p class="language extra"><span class="more">Language: </span>{{moviedata.Language}}</p>
+        <p class="rating extra"><span class="more">Rating: </span>{{moviedata.imdbRating}}</p>
+        <p class="votes extra"><span class="more">Votes: </span>{{moviedata.imdbVotes}}</p>
+      </div>
+    </a>
+  </md-card>
+
+</div>
