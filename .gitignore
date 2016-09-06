@@ -21,7 +21,6 @@ jspm_packages
 ### Internal folders ###
 private
 db
-css
 
 ### Windows ###
 Thumbs.db
