@@ -6,16 +6,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
-  $scope.moviename = "";
-  $scope.movieyear = "";
+  $scope.moviename = '';
+  $scope.movieyear = '';
+  $scope.apiUrl = 'https://www.omdbapi.com/';
 
   $scope.getDetails = function(formimdb, movie) {
     moviename = movie.name;
-    console.log(moviename);
-    movieyear = movie.year;
-    console.log(movieyear);
+    $scope.apiUrl = $scope.apiUrl + '?t=' + moviename + '&r=json';
+    // console.log(moviename);
+    if (movie.year) {
+      movieyear = movie.year;
+      $scope.apiUrl = $scope.apiUrl + '?t=' + moviename + '&y=' + movieyear + '&r=json';
+    }
+    // console.log(movieyear);
     if (formimdb.$valid) {
-      $http.get('https://www.omdbapi.com/?t=' + moviename + '&y=' + movieyear + '&r=json')
+      $http.get($scope.apiUrl)
         .success(function(data) {
           $scope.moviedata = data;
           console.log(data);
