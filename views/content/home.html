@@ -1,5 +1,7 @@
 <div class="container">
 
+  <h3 class="issue">IDMB movie search is disabled due to technical issue</h3>
+
   <form name="imdb" ng-hide="formComplete">
     <md-input-container class="md-block" flex-gt-sm>
       <label>Enter movie name</label>
@@ -9,7 +11,7 @@
       <label>Enter movie year (Optional)</label>
       <input type="number" ng-model="movie.year">
     </md-input-container>
-    <md-button class="md-raised md-accent" ng-click="getDetails(imdb, movie)" ng-submit="getDetails(imdb, movie)">Submit</md-button>
+    <md-button class="md-raised md-accent" ng-click="getDetails(imdb, movie)" ng-submit="getDetails(imdb, movie)" ng-disabled="true">Submit</md-button>
   </form>
 
   <md-card ng-if="moviedata" title="{{moviedata.Title}}">
